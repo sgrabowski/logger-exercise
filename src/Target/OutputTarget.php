@@ -21,7 +21,7 @@ abstract class OutputTarget
         $this->handleOutput($this->formatter->format($log));
     }
 
-    public abstract function handleOutput(string $output): void;
+    protected abstract function handleOutput(string $output): void;
 
     public function getMinimumLoggingLevel(): int
     {

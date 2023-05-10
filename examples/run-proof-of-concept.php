@@ -14,7 +14,7 @@ use App\Logger\Target\StandardOutput;
 
 class MyCustomOutput extends OutputTarget
 {
-    public function handleOutput(string $output): void
+    protected function handleOutput(string $output): void
     {
         fwrite(STDOUT, '---- THIS GOES SOMEWHERE ELSE ----'.PHP_EOL.$output.PHP_EOL);
     }
